@@ -7,7 +7,12 @@ namespace Euvic.WebAPI.HttpMethods.Controllers
     [ApiController]
     public class TrainingsController : ControllerBase
     {
+        //
         // w każdym endpoincie zamień Route() na odpowiednia metodę http: HttpGet, HttpPost, HttpPut, HttpPatch, HttpDelete
+        //
+        // ----------------------------------------------------------------------------------------------------------------
+
+        // ten endpoint jest juz gotowy i zostalo tu zamienione Route("") na HttpGet("")
         [HttpGet("")]
         public IActionResult GetTrainings() => Ok();
 
