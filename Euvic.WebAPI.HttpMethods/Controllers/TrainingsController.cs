@@ -8,7 +8,7 @@ namespace Euvic.WebAPI.HttpMethods.Controllers
     public class TrainingsController : ControllerBase
     {
         //
-        // w każdym endpoincie zamień Route() na odpowiednia metodę http: HttpGet, HttpPost, HttpPut, HttpPatch, HttpDelete
+        // w każdym endpoincie zamień [?]() na odpowiednia metodę http: HttpGet, HttpPost, HttpPut, HttpPatch, HttpDelete
         //
         // ----------------------------------------------------------------------------------------------------------------
 
@@ -16,22 +16,24 @@ namespace Euvic.WebAPI.HttpMethods.Controllers
         [HttpGet("")]
         public IActionResult GetTrainings() => Ok();
 
-        [Route("{id}/attendees")]
+        // endpointy poniżej są do zrobienia
+        // ----------------------------------------------------------------------------------------------------------------
+        [[?] ("{id}/attendees")]
         public IActionResult GetTrainingAttendees() => Ok();
 
-        [Route("")]
+        [[?] ("")]
         public IActionResult CreateTraining() => Ok();
 
-        [Route("{id}")]
+        [[?] ("{id}")]
         public IActionResult DeleteTraining([FromRoute] int id) => Ok();
 
-        [Route("{id}/attendee")]
+        [[?] ("{id}/attendee")]
         public IActionResult DeleteAttendee([FromRoute] int id) => Ok();
 
-        [Route("{id}")]
+        [[?] ("{id}")]
         public IActionResult UpdateTraining([FromRoute] int id, [FromBody] UpdateTrainingRequest request) => Ok();
 
-        [Route("{id}/duration")]
+        [[?] ("{id}/duration")]
         public IActionResult ChangeTrainingDuration([FromRoute] int id, [FromBody] int durationInMinutes) => Ok();
     }
 }
